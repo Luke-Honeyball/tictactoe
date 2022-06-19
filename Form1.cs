@@ -15,7 +15,7 @@ namespace tictactoe
             InitializeComponent();
             initialize();
             t.Tick += T_Tick;
-            t.Interval = 2000;
+            t.Interval = 500;
         }
 
         private void T_Tick(object sender, EventArgs e)
@@ -202,7 +202,8 @@ namespace tictactoe
             else if (cnt == 3)
             {
                 MessageBox.Show("YOU WON THE GAME!", "WIN");
-                this.Close();
+                Application.Restart();
+                Environment.Exit(0);
             }
             if (!went)
             {
@@ -233,7 +234,8 @@ namespace tictactoe
                 else if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    this.Close();
+                    Application.Restart();
+                    Environment.Exit(0);
                 }
             }
             if (!went)
@@ -265,7 +267,8 @@ namespace tictactoe
                 else if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    this.Close();
+                    Application.Restart();
+                    Environment.Exit(0);
                 }
             }
             cnt = 0;
@@ -297,7 +300,8 @@ namespace tictactoe
                 else if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    this.Close();
+                    Application.Restart();
+                    Environment.Exit(0);
                 }
             }
             if (!went)
@@ -329,7 +333,8 @@ namespace tictactoe
                 else if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    this.Close();
+                    Application.Restart();
+                    Environment.Exit(0);
                 }
             }
             if (!went)
@@ -361,7 +366,8 @@ namespace tictactoe
                 else if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    this.Close();
+                    Application.Restart();
+                    Environment.Exit(0);
                 }
             }
             if (!went)
@@ -413,7 +419,8 @@ namespace tictactoe
                 else if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    this.Close();
+                    Application.Restart();
+                    Environment.Exit(0);
                 }
 
                 if (!went)
@@ -465,7 +472,8 @@ namespace tictactoe
                     else if (cnt == 3)
                     {
                         MessageBox.Show("YOU WON THE GAME!", "WIN");
-                        this.Close();
+                        Application.Restart();
+                        Environment.Exit(0);
                     }
                 }
             }
@@ -762,8 +770,9 @@ namespace tictactoe
             }
             if (cnn == 3)
             {
-                MessageBox.Show("THE PC WINS!");
-                this.Close();
+                MessageBox.Show("THE PC WINS!", "LOSE");
+                Application.Restart();
+                Environment.Exit(0);
             }
 
             cnn = 0;
@@ -776,8 +785,9 @@ namespace tictactoe
             }
             if (cnn == 3)
             {
-                MessageBox.Show("THE PC WINS!");
-                this.Close();
+                MessageBox.Show("THE PC WINS!", "LOSE");
+                Application.Restart();
+                Environment.Exit(0);
             }
             cnn = 0;
             for (int x = 0; x < 3; x++)
@@ -790,8 +800,9 @@ namespace tictactoe
 
             if (cnn == 3)
             {
-                MessageBox.Show("THE PC WINS!");
-                this.Close();
+                MessageBox.Show("THE PC WINS!", "LOSE");
+                Application.Restart();
+                Environment.Exit(0);
             }
 
             cnn = 0;
@@ -805,8 +816,9 @@ namespace tictactoe
 
             if (cnn == 3)
             {
-                MessageBox.Show("THE PC WINS!");
-                this.Close();
+                MessageBox.Show("THE PC WINS!", "LOSE");
+                Application.Restart();
+                Environment.Exit(0);
             }
 
             cnn = 0;
@@ -820,8 +832,9 @@ namespace tictactoe
 
             if (cnn == 3)
             {
-                MessageBox.Show("THE PC WINS!");
-                this.Close();
+                MessageBox.Show("THE PC WINS!", "LOSE");
+                Application.Restart();
+                Environment.Exit(0);
             }
 
             cnn = 0;
@@ -834,8 +847,9 @@ namespace tictactoe
             }
             if (cnn == 3)
             {
-                MessageBox.Show("THE PC WINS!");
-                this.Close();
+                MessageBox.Show("THE PC WINS!", "LOSE");
+                Application.Restart();
+                Environment.Exit(0);
             }
             cnn = 0;
 
@@ -854,8 +868,9 @@ namespace tictactoe
 
             if (cnn == 3)
             {
-                MessageBox.Show("THE PC WINS!");
-                this.Close();
+                MessageBox.Show("THE PC WINS!", "LOSE");
+                Application.Restart();
+                Environment.Exit(0);
             }
 
             cnn = 0;
@@ -876,7 +891,8 @@ namespace tictactoe
             if (cnn == 3)
             {
                 MessageBox.Show("THE PC WINS!");
-                this.Close();
+                Application.Restart();
+                Environment.Exit(0);
             }
 
             int chk = 0;
@@ -893,7 +909,8 @@ namespace tictactoe
             if (chk == 9)
             {
                 MessageBox.Show("THE GAME WAS A TIE!", "TIE");
-                this.Close();
+                Application.Restart();
+                Environment.Exit(0);
             }
 
             label1.Text = "Your turn.";
