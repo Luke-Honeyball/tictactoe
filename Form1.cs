@@ -201,7 +201,7 @@ namespace tictactoe
             }
             else if (cnt == 3)
             {
-                MessageBox.Show("YOU WIN!");
+                MessageBox.Show("YOU WON THE GAME!", "WIN");
                 this.Close();
             }
             if (!went)
@@ -232,7 +232,7 @@ namespace tictactoe
                 }
                 else if (cnt == 3)
                 {
-                    MessageBox.Show("YOU WIN!");
+                    MessageBox.Show("YOU WON THE GAME!", "WIN");
                     this.Close();
                 }
             }
@@ -264,7 +264,7 @@ namespace tictactoe
                 }
                 else if (cnt == 3)
                 {
-                    MessageBox.Show("YOU WIN!");
+                    MessageBox.Show("YOU WON THE GAME!", "WIN");
                     this.Close();
                 }
             }
@@ -296,7 +296,7 @@ namespace tictactoe
                 }
                 else if (cnt == 3)
                 {
-                    MessageBox.Show("YOU WIN!");
+                    MessageBox.Show("YOU WON THE GAME!", "WIN");
                     this.Close();
                 }
             }
@@ -328,7 +328,7 @@ namespace tictactoe
                 }
                 else if (cnt == 3)
                 {
-                    MessageBox.Show("YOU WIN!");
+                    MessageBox.Show("YOU WON THE GAME!", "WIN");
                     this.Close();
                 }
             }
@@ -360,7 +360,7 @@ namespace tictactoe
                 }
                 else if (cnt == 3)
                 {
-                    MessageBox.Show("YOU WIN!");
+                    MessageBox.Show("YOU WON THE GAME!", "WIN");
                     this.Close();
                 }
             }
@@ -412,7 +412,7 @@ namespace tictactoe
                 }
                 else if (cnt == 3)
                 {
-                    MessageBox.Show("YOU WIN!");
+                    MessageBox.Show("YOU WON THE GAME!", "WIN");
                     this.Close();
                 }
 
@@ -464,7 +464,7 @@ namespace tictactoe
                     }
                     else if (cnt == 3)
                     {
-                        MessageBox.Show("YOU WIN!");
+                        MessageBox.Show("YOU WON THE GAME!", "WIN");
                         this.Close();
                     }
                 }
@@ -892,7 +892,8 @@ namespace tictactoe
             }
             if (chk == 9)
             {
-                MessageBox.Show("TIE!");
+                MessageBox.Show("THE GAME WAS A TIE!", "TIE");
+                this.Close();
             }
 
             label1.Text = "Your turn.";
