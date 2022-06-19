@@ -176,8 +176,6 @@ namespace tictactoe
         {
             bool went = false;
 
-
-
             int cnt = 0;
             int pccnt = 0;
             for (int x = 0; x < 3; x++)
@@ -191,18 +189,7 @@ namespace tictactoe
                     pccnt++;
                 }
             }
-            if (cnt == 2)
-            {
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[0][x] == "none")
-                    {
-                        map[0][x] = "naught";
-                        went = true;
-                    }
-                }
-            }
-            else if (cnt == 3)
+            if (cnt == 3)
             {
                 MessageBox.Show("YOU WON THE GAME!", "WIN");
                 Application.Restart();
@@ -223,18 +210,7 @@ namespace tictactoe
                         pccnt++;
                     }
                 }
-                if (cnt == 2)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (map[1][x] == "none")
-                        {
-                            map[1][x] = "naught";
-                            went = true;
-                        }
-                    }
-                }
-                else if (cnt == 3)
+                if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     Application.Restart();
@@ -256,18 +232,7 @@ namespace tictactoe
                         pccnt++;
                     }
                 }
-                if (cnt == 2)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (map[2][x] == "none")
-                        {
-                            map[2][x] = "naught";
-                            went = true;
-                        }
-                    }
-                }
-                else if (cnt == 3)
+                if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     Application.Restart();
@@ -275,7 +240,6 @@ namespace tictactoe
                 }
             }
             cnt = 0;
-            pccnt = 0;
             if (!went)
             {
                 for (int x = 0; x < 3; x++)
@@ -289,18 +253,7 @@ namespace tictactoe
                         pccnt++;
                     }
                 }
-                if (cnt == 2)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (map[x][0] == "none")
-                        {
-                            map[x][0] = "naught";
-                            went = true;
-                        }
-                    }
-                }
-                else if (cnt == 3)
+                if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     Application.Restart();
@@ -322,18 +275,7 @@ namespace tictactoe
                         pccnt++;
                     }
                 }
-                if (cnt == 2)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (map[x][1] == "none")
-                        {
-                            map[x][1] = "naught";
-                            went = true;
-                        }
-                    }
-                }
-                else if (cnt == 3)
+                if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     Application.Restart();
@@ -355,18 +297,7 @@ namespace tictactoe
                         pccnt++;
                     }
                 }
-                if (cnt == 2)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (map[x][2] == "none")
-                        {
-                            map[x][2] = "naught";
-                            went = true;
-                        }
-                    }
-                }
-                else if (cnt == 3)
+                if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     Application.Restart();
@@ -400,24 +331,6 @@ namespace tictactoe
                 if (map[2][2] == "naught")
                 {
                     pccnt++;
-                }
-                if (cnt == 2)
-                {
-                    if (map[0][0] != "cross")
-                    {
-                        map[0][0] = "naught";
-                        went = true;
-                    }
-                    else if (map[1][1] != "cross")
-                    {
-                        map[1][1] = "naught";
-                        went = true;
-                    }
-                    else if (map[2][2] != "cross")
-                    {
-                        map[2][2] = "naught";
-                        went = true;
-                    }
                 }
                 else if (cnt == 3)
                 {
@@ -454,24 +367,6 @@ namespace tictactoe
                     {
                         pccnt++;
                     }
-                    if (cnt == 2)
-                    {
-                        if (map[0][2] != "cross")
-                        {
-                            map[0][2] = "naught";
-                            went = true;
-                        }
-                        else if (map[1][1] != "cross")
-                        {
-                            map[1][1] = "naught";
-                            went = true;
-                        }
-                        else if (map[2][0] != "cross")
-                        {
-                            map[2][0] = "naught";
-                            went = true;
-                        }
-                    }
                     else if (cnt == 3)
                     {
                         MessageBox.Show("YOU WON THE GAME!", "WIN");
@@ -480,8 +375,8 @@ namespace tictactoe
                     }
                 }
 
-
                 int qwe = 0;
+
                 for (int x = 0; x < 3; x++)
                 {
                     if (map[x][0] == "naught")
@@ -633,7 +528,6 @@ namespace tictactoe
                     }
                 }
 
-
                 qwe = 0;
                 if (map[0][2] == "naught")
                 {
@@ -668,208 +562,25 @@ namespace tictactoe
             }
             if (!went)
             {
-                int cn = 0;
+                cnt = 0;
                 for (int x = 0; x < 3; x++)
                 {
+                    if (map[0][x] == "cross")
+                    {
+                        cnt++;
+                    }
                     if (map[0][x] == "naught")
                     {
-                        cn++;
+                        pccnt++;
                     }
                 }
-                if (cn > 0)
+                if (cnt == 2)
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (!went)
+                        if (map[0][x] == "none")
                         {
-                            if (map[0][x] == "none")
-                            {
-                                map[0][x] = "naught";
-                                went = true;
-                            }
-                        }
-                    }
-                }
-
-                cn = 0;
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[1][x] == "naught")
-                    {
-                        cn++;
-                    }
-                }
-                if (cn > 0)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (!went)
-                        {
-                            if (map[1][x] == "none")
-                            {
-                                went = true;
-                                map[1][x] = "naught";
-                            }
-                        }
-                    }
-                }
-                cn = 0;
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[2][x] == "naught")
-                    {
-                        cn++;
-                    }
-                }
-                if (cn > 0)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (!went)
-                        {
-                            if (map[2][x] == "none")
-                            {
-                                map[2][x] = "naught";
-                                went = true;
-                            }
-                        }
-                    }
-                }
-
-                cn = 0;
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[x][0] == "naught")
-                    {
-                        cn++;
-                    }
-                }
-                if (cn > 0)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (!went)
-                        {
-                            if (map[x][0] == "none")
-                            {
-                                map[x][0] = "naught";
-                                went = true;
-                            }
-                        }
-                    }
-                }
-
-                cn = 0;
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[x][1] == "naught")
-                    {
-                        cn++;
-                    }
-                }
-                if (cn > 0)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (!went)
-                        {
-                            if (map[x][1] == "none")
-                            {
-                                map[x][1] = "naught";
-                                went = true;
-                            }
-                        }
-                    }
-                }
-
-                cn = 0;
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[x][2] == "naught")
-                    {
-                        cn++;
-                    }
-                }
-                if (cn > 0)
-                {
-                    for (int x = 0; x < 3; x++)
-                    {
-                        if (!went)
-                        {
-                            if (map[x][2] == "none")
-                            {
-                                map[x][2] = "naught";
-                                went = true;
-                            }
-                        }
-                    }
-                }
-
-                cn = 0;
-                if (!went)
-                {
-                    if (map[0][0] == "naught")
-                    {
-                        cn++;
-                    }
-                    if (map[1][1] == "naught")
-                    {
-                        cn++;
-                    }
-                    if (map[2][2] == "naught")
-                    {
-                        cn++;
-                    }
-                    if (cn > 0)
-                    {
-                        if (map[0][0] == "none")
-                        {
-                            map[0][0] = "naught";
-                            went = true;
-                        }
-                        else if (map[1][1] == "none")
-                        {
-                            map[1][1] = "naught";
-                            went = true;
-                        }
-                        else if (map[2][2] == "none")
-                        {
-                            map[2][2] = "naught";
-                            went = true;
-                        }
-                    }
-                }
-
-                cn = 0;
-                if (!went)
-                {
-                    if (map[0][2] == "naught")
-                    {
-                        cn++;
-                    }
-                    if (map[1][1] == "naught")
-                    {
-                        cn++;
-                    }
-                    if (map[2][0] == "naught")
-                    {
-                        cn++;
-                    }
-                    if (cn > 0)
-                    {
-                        if (map[0][2] == "none")
-                        {
-                            map[0][2] = "naught";
-                            went = true;
-                        }
-                        else if (map[1][1] == "none")
-                        {
-                            map[1][1] = "naught";
-                            went = true;
-                        }
-                        else if (map[2][0] == "none")
-                        {
-                            map[2][0] = "naught";
+                            map[0][x] = "naught";
                             went = true;
                         }
                     }
@@ -877,229 +588,664 @@ namespace tictactoe
             }
             if (!went)
             {
-                Random r = new Random();
-                bool placed = false;
-                while (!placed) {
-                    int x = r.Next(0, 3);
-                    int y = r.Next(0, 3);
-                    if (map[x][y] == "none") {
-                        map[x][y] = "naught";
-                        placed = true;
-                    }
-                }
-            }
-
-            for (int x = 0; x < 3; x++)
-            {
-                for (int y = 0; y < 3; y++)
+                cnt = 0;
+                for (int x = 0; x < 3; x++)
                 {
-                    if (map[x][y] == "naught")
+                    if (map[1][x] == "cross")
                     {
-                        if (x == 0)
-                        {
-                            if (y == 0)
-                            {
-                                pictureBox1.Image = Properties.Resources.naught;
-                            }
-                            else if (y == 1)
-                            {
-                                pictureBox2.Image = Properties.Resources.naught;
-                            }
-                            else if (y == 2)
-                            {
-                                pictureBox3.Image = Properties.Resources.naught;
-                            }
-                        }
-                        else if (x == 1)
-                        {
-                            if (y == 0)
-                            {
-                                pictureBox4.Image = Properties.Resources.naught;
-                            }
-                            else if (y == 1)
-                            {
-                                pictureBox5.Image = Properties.Resources.naught;
-                            }
-                            else if (y == 2)
-                            {
-                                pictureBox6.Image = Properties.Resources.naught;
-                            }
-                        }
-                        else if (x == 2)
-                        {
-                            if (y == 0)
-                            {
-                                pictureBox7.Image = Properties.Resources.naught;
-                            }
-                            else if (y == 1)
-                            {
-                                pictureBox8.Image = Properties.Resources.naught;
-                            }
-                            else if (y == 2)
-                            {
-                                pictureBox9.Image = Properties.Resources.naught;
-                            }
-                        }
+                        cnt++;
                     }
-                }
-            }
-
-            int cnn = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[0][x] == "naught")
-                {
-                    cnn++;
-                }
-            }
-            if (cnn == 3)
-            {
-                MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
-            }
-
-            cnn = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[1][x] == "naught")
-                {
-                    cnn++;
-                }
-            }
-            if (cnn == 3)
-            {
-                MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
-            }
-            cnn = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[2][x] == "naught")
-                {
-                    cnn++;
-                }
-            }
-
-            if (cnn == 3)
-            {
-                MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
-            }
-
-            cnn = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[x][0] == "naught")
-                {
-                    cnn++;
-                }
-            }
-
-            if (cnn == 3)
-            {
-                MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
-            }
-
-            cnn = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[x][1] == "naught")
-                {
-                    cnn++;
-                }
-            }
-
-            if (cnn == 3)
-            {
-                MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
-            }
-
-            cnn = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[x][2] == "naught")
-                {
-                    cnn++;
-                }
-            }
-            if (cnn == 3)
-            {
-                MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
-            }
-            cnn = 0;
-
-            if (map[0][0] == "naught")
-            {
-                cnn++;
-            }
-            if (map[1][1] == "naught")
-            {
-                cnn++;
-            }
-            if (map[2][2] == "naught")
-            {
-                cnn++;
-            }
-
-            if (cnn == 3)
-            {
-                MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
-            }
-
-            cnn = 0;
-
-            if (map[0][2] == "naught")
-            {
-                cnn++;
-            }
-            if (map[1][1] == "naught")
-            {
-                cnn++;
-            }
-            if (map[2][0] == "naught")
-            {
-                cnn++;
-            }
-
-            if (cnn == 3)
-            {
-                MessageBox.Show("THE PC WINS!");
-                Application.Restart();
-                Environment.Exit(0);
-            }
-
-            int chk = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                for (int y = 0; y < 3; y++)
-                {
-                    if (map[x][y] != "none")
+                    if (map[1][x] == "naught")
                     {
-                        chk++;
+                        pccnt++;
+                    }
+                }
+                if (cnt == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[1][x] == "none")
+                        {
+                            map[1][x] = "naught";
+                            went = true;
+                        }
                     }
                 }
             }
-            if (chk == 9)
+            if (!went)
             {
-                MessageBox.Show("THE GAME WAS A TIE!", "TIE");
-                Application.Restart();
-                Environment.Exit(0);
+                cnt = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[2][x] == "cross")
+                    {
+                        cnt++;
+                    }
+                    if (map[2][x] == "naught")
+                    {
+                        pccnt++;
+                    }
+                }
+                if (cnt == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[2][x] == "none")
+                        {
+                            map[2][x] = "naught";
+                            went = true;
+                        }
+                    }
+                }
             }
+            cnt = 0;
+            if (!went)
+            {
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][0] == "cross")
+                    {
+                        cnt++;
+                    }
+                    if (map[x][0] == "naught")
+                    {
+                        pccnt++;
+                    }
+                }
+                if (cnt == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][0] == "none")
+                        {
+                            map[x][0] = "naught";
+                            went = true;
+                        }
+                    }
+                }
+            }
+            if (!went)
+            {
+                cnt = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][1] == "cross")
+                    {
+                        cnt++;
+                    }
+                    if (map[x][1] == "naught")
+                    {
+                        pccnt++;
+                    }
+                }
+                if (cnt == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][1] == "none")
+                        {
+                            map[x][1] = "naught";
+                            went = true;
+                        }
+                    }
+                }
+            }
+            if (!went)
+            {
+                cnt = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][2] == "cross")
+                    {
+                        cnt++;
+                    }
+                    if (map[x][2] == "naught")
+                    {
+                        pccnt++;
+                    }
+                }
+                if (cnt == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][2] == "none")
+                        {
+                            map[x][2] = "naught";
+                            went = true;
+                        }
+                    }
+                }
+            }
+            if (!went)
+            {
+                cnt = 0;
+                if (map[0][0] == "cross")
+                {
+                    cnt++;
+                }
+                if (map[0][0] == "naught")
+                {
+                    pccnt++;
+                }
+                if (map[1][1] == "cross")
+                {
+                    cnt++;
+                }
+                if (map[1][1] == "naught")
+                {
+                    pccnt++;
+                }
+                if (map[2][2] == "cross")
+                {
+                    cnt++;
+                }
+                if (map[2][2] == "naught")
+                {
+                    pccnt++;
+                }
+                if (cnt == 2)
+                {
+                    if (map[0][0] != "cross")
+                    {
+                        map[0][0] = "naught";
+                        went = true;
+                    }
+                    else if (map[1][1] != "cross")
+                    {
+                        map[1][1] = "naught";
+                        went = true;
+                    }
+                    else if (map[2][2] != "cross")
+                    {
+                        map[2][2] = "naught";
+                        went = true;
+                    }
+                }
+                if (!went)
+                {
+                    cnt = 0;
+                    if (map[0][2] == "cross")
+                    {
+                        cnt++;
+                    }
+                    if (map[0][2] == "naught")
+                    {
+                        pccnt++;
+                    }
+                    if (map[1][1] == "cross")
+                    {
+                        cnt++;
+                    }
+                    if (map[1][1] == "naught")
+                    {
+                        pccnt++;
+                    }
+                    if (map[2][0] == "cross")
+                    {
+                        cnt++;
+                    }
+                    if (map[2][0] == "naught")
+                    {
+                        pccnt++;
+                    }
+                    if (cnt == 2)
+                    {
+                        if (map[0][2] != "cross")
+                        {
+                            map[0][2] = "naught";
+                            went = true;
+                        }
+                        else if (map[1][1] != "cross")
+                        {
+                            map[1][1] = "naught";
+                            went = true;
+                        }
+                        else if (map[2][0] != "cross")
+                        {
+                            map[2][0] = "naught";
+                            went = true;
+                        }
+                    }
+                }
 
-            label1.Text = "Your turn.";
+                if (!went)
+                {
+                    int cn = 0;
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[0][x] == "naught")
+                        {
+                            cn++;
+                        }
+                    }
+                    if (cn > 0)
+                    {
+                        for (int x = 0; x < 3; x++)
+                        {
+                            if (!went)
+                            {
+                                if (map[0][x] == "none")
+                                {
+                                    map[0][x] = "naught";
+                                    went = true;
+                                }
+                            }
+                        }
+                    }
 
-            player_turn = true;
+                    cn = 0;
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[1][x] == "naught")
+                        {
+                            cn++;
+                        }
+                    }
+                    if (cn > 0)
+                    {
+                        for (int x = 0; x < 3; x++)
+                        {
+                            if (!went)
+                            {
+                                if (map[1][x] == "none")
+                                {
+                                    went = true;
+                                    map[1][x] = "naught";
+                                }
+                            }
+                        }
+                    }
+                    cn = 0;
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[2][x] == "naught")
+                        {
+                            cn++;
+                        }
+                    }
+                    if (cn > 0)
+                    {
+                        for (int x = 0; x < 3; x++)
+                        {
+                            if (!went)
+                            {
+                                if (map[2][x] == "none")
+                                {
+                                    map[2][x] = "naught";
+                                    went = true;
+                                }
+                            }
+                        }
+                    }
+
+                    cn = 0;
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][0] == "naught")
+                        {
+                            cn++;
+                        }
+                    }
+                    if (cn > 0)
+                    {
+                        for (int x = 0; x < 3; x++)
+                        {
+                            if (!went)
+                            {
+                                if (map[x][0] == "none")
+                                {
+                                    map[x][0] = "naught";
+                                    went = true;
+                                }
+                            }
+                        }
+                    }
+
+                    cn = 0;
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][1] == "naught")
+                        {
+                            cn++;
+                        }
+                    }
+                    if (cn > 0)
+                    {
+                        for (int x = 0; x < 3; x++)
+                        {
+                            if (!went)
+                            {
+                                if (map[x][1] == "none")
+                                {
+                                    map[x][1] = "naught";
+                                    went = true;
+                                }
+                            }
+                        }
+                    }
+
+                    cn = 0;
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][2] == "naught")
+                        {
+                            cn++;
+                        }
+                    }
+                    if (cn > 0)
+                    {
+                        for (int x = 0; x < 3; x++)
+                        {
+                            if (!went)
+                            {
+                                if (map[x][2] == "none")
+                                {
+                                    map[x][2] = "naught";
+                                    went = true;
+                                }
+                            }
+                        }
+                    }
+
+                    cn = 0;
+                    if (!went)
+                    {
+                        if (map[0][0] == "naught")
+                        {
+                            cn++;
+                        }
+                        if (map[1][1] == "naught")
+                        {
+                            cn++;
+                        }
+                        if (map[2][2] == "naught")
+                        {
+                            cn++;
+                        }
+                        if (cn > 0)
+                        {
+                            if (map[0][0] == "none")
+                            {
+                                map[0][0] = "naught";
+                                went = true;
+                            }
+                            else if (map[1][1] == "none")
+                            {
+                                map[1][1] = "naught";
+                                went = true;
+                            }
+                            else if (map[2][2] == "none")
+                            {
+                                map[2][2] = "naught";
+                                went = true;
+                            }
+                        }
+                    }
+
+                    cn = 0;
+                    if (!went)
+                    {
+                        if (map[0][2] == "naught")
+                        {
+                            cn++;
+                        }
+                        if (map[1][1] == "naught")
+                        {
+                            cn++;
+                        }
+                        if (map[2][0] == "naught")
+                        {
+                            cn++;
+                        }
+                        if (cn > 0)
+                        {
+                            if (map[0][2] == "none")
+                            {
+                                map[0][2] = "naught";
+                                went = true;
+                            }
+                            else if (map[1][1] == "none")
+                            {
+                                map[1][1] = "naught";
+                                went = true;
+                            }
+                            else if (map[2][0] == "none")
+                            {
+                                map[2][0] = "naught";
+                                went = true;
+                            }
+                        }
+                    }
+                }
+            }
+                if (!went)
+                {
+                    Random r = new Random();
+                    bool placed = false;
+                    while (!placed)
+                    {
+                        int x = r.Next(0, 3);
+                        int y = r.Next(0, 3);
+                        if (map[x][y] == "none")
+                        {
+                            map[x][y] = "naught";
+                            placed = true;
+                        }
+                    }
+                }
+
+                for (int x = 0; x < 3; x++)
+                {
+                    for (int y = 0; y < 3; y++)
+                    {
+                        if (map[x][y] == "naught")
+                        {
+                            if (x == 0)
+                            {
+                                if (y == 0)
+                                {
+                                    pictureBox1.Image = Properties.Resources.naught;
+                                }
+                                else if (y == 1)
+                                {
+                                    pictureBox2.Image = Properties.Resources.naught;
+                                }
+                                else if (y == 2)
+                                {
+                                    pictureBox3.Image = Properties.Resources.naught;
+                                }
+                            }
+                            else if (x == 1)
+                            {
+                                if (y == 0)
+                                {
+                                    pictureBox4.Image = Properties.Resources.naught;
+                                }
+                                else if (y == 1)
+                                {
+                                    pictureBox5.Image = Properties.Resources.naught;
+                                }
+                                else if (y == 2)
+                                {
+                                    pictureBox6.Image = Properties.Resources.naught;
+                                }
+                            }
+                            else if (x == 2)
+                            {
+                                if (y == 0)
+                                {
+                                    pictureBox7.Image = Properties.Resources.naught;
+                                }
+                                else if (y == 1)
+                                {
+                                    pictureBox8.Image = Properties.Resources.naught;
+                                }
+                                else if (y == 2)
+                                {
+                                    pictureBox9.Image = Properties.Resources.naught;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                int cnn = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[0][x] == "naught")
+                    {
+                        cnn++;
+                    }
+                }
+                if (cnn == 3)
+                {
+                    MessageBox.Show("THE PC WINS!", "LOSE");
+                    Application.Restart();
+                    Environment.Exit(0);
+                }
+
+                cnn = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[1][x] == "naught")
+                    {
+                        cnn++;
+                    }
+                }
+                if (cnn == 3)
+                {
+                    MessageBox.Show("THE PC WINS!", "LOSE");
+                    Application.Restart();
+                    Environment.Exit(0);
+                }
+                cnn = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[2][x] == "naught")
+                    {
+                        cnn++;
+                    }
+                }
+
+                if (cnn == 3)
+                {
+                    MessageBox.Show("THE PC WINS!", "LOSE");
+                    Application.Restart();
+                    Environment.Exit(0);
+                }
+
+                cnn = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][0] == "naught")
+                    {
+                        cnn++;
+                    }
+                }
+
+                if (cnn == 3)
+                {
+                    MessageBox.Show("THE PC WINS!", "LOSE");
+                    Application.Restart();
+                    Environment.Exit(0);
+                }
+
+                cnn = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][1] == "naught")
+                    {
+                        cnn++;
+                    }
+                }
+
+                if (cnn == 3)
+                {
+                    MessageBox.Show("THE PC WINS!", "LOSE");
+                    Application.Restart();
+                    Environment.Exit(0);
+                }
+
+                cnn = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][2] == "naught")
+                    {
+                        cnn++;
+                    }
+                }
+                if (cnn == 3)
+                {
+                    MessageBox.Show("THE PC WINS!", "LOSE");
+                    Application.Restart();
+                    Environment.Exit(0);
+                }
+                cnn = 0;
+
+                if (map[0][0] == "naught")
+                {
+                    cnn++;
+                }
+                if (map[1][1] == "naught")
+                {
+                    cnn++;
+                }
+                if (map[2][2] == "naught")
+                {
+                    cnn++;
+                }
+
+                if (cnn == 3)
+                {
+                    MessageBox.Show("THE PC WINS!", "LOSE");
+                    Application.Restart();
+                    Environment.Exit(0);
+                }
+
+                cnn = 0;
+
+                if (map[0][2] == "naught")
+                {
+                    cnn++;
+                }
+                if (map[1][1] == "naught")
+                {
+                    cnn++;
+                }
+                if (map[2][0] == "naught")
+                {
+                    cnn++;
+                }
+
+                if (cnn == 3)
+                {
+                    MessageBox.Show("THE PC WINS!");
+                    Application.Restart();
+                    Environment.Exit(0);
+                }
+
+                int chk = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    for (int y = 0; y < 3; y++)
+                    {
+                        if (map[x][y] != "none")
+                        {
+                            chk++;
+                        }
+                    }
+                }
+                if (chk == 9)
+                {
+                    MessageBox.Show("THE GAME WAS A TIE!", "TIE");
+                    Application.Restart();
+                    Environment.Exit(0);
+                }
+
+                label1.Text = "Your turn.";
+
+                player_turn = true;
+            
         }
     }
 }
