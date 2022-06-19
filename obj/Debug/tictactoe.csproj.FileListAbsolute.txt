@@ -1,0 +1,11 @@
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\bin\Debug\tictactoe.exe.config
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\bin\Debug\tictactoe.exe
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\bin\Debug\tictactoe.pdb
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\obj\Debug\tictactoe.csproj.AssemblyReference.cache
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\obj\Debug\tictactoe.csproj.SuggestedBindingRedirects.cache
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\obj\Debug\tictactoe.Form1.resources
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\obj\Debug\tictactoe.Properties.Resources.resources
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\obj\Debug\tictactoe.csproj.GenerateResource.cache
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\obj\Debug\tictactoe.csproj.CoreCompileInputs.cache
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\obj\Debug\tictactoe.exe
+C:\Users\lukeh\Documents\VS Projects\tictactoe\tictactoe\obj\Debug\tictactoe.pdb
