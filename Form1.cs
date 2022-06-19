@@ -868,19 +868,14 @@ namespace tictactoe
             }
             if (!went)
             {
-                for (int x = 0; x < 3; x++)
-                {
-                    for (int y = 0; y < 3; y++)
-                    {
-                        if (!went)
-                        {
-                            if (map[x][y] == "none")
-
-                            {
-                                went = true;
-                                map[x][y] = "naught";
-                            }
-                        }
+                Random r = new Random();
+                bool placed = false;
+                while (!placed) {
+                    int x = r.Next(0, 3);
+                    int y = r.Next(0, 3);
+                    if (map[x][y] == "none") {
+                        map[x][y] = "naught";
+                        placed = true;
                     }
                 }
             }
