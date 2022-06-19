@@ -15,7 +15,7 @@ namespace tictactoe
             InitializeComponent();
             initialize();
             t.Tick += T_Tick;
-            t.Interval = 500;
+            t.Interval = 1000;
         }
 
         private void T_Tick(object sender, EventArgs e)
@@ -176,183 +176,6 @@ namespace tictactoe
         {
             bool went = false;
 
-
-            int qwe = 0;
-            for (int x = 0; x < 3; x++) {
-                if (map[x][0] == "naught") {
-                    qwe++;
-                }
-            }
-            if (qwe == 2) {
-                for (int x = 0; x < 3; x++) {
-                    if (map[x][0] == "none") {
-                        map[x][0] = "naught";
-                        went = true;
-                    }
-                }
-            }
-
-            qwe = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[x][1] == "naught")
-                {
-                    qwe++;
-                }
-            }
-            if (qwe == 2)
-            {
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[x][1] == "none")
-                    {
-                        went = true;
-                        map[x][1] = "naught";
-                    }
-                }
-            }
-
-            qwe = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[x][2] == "naught")
-                {
-                    qwe++;
-                }
-            }
-            if (qwe == 2)
-            {
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[x][2] == "none")
-                    {
-                        map[x][2] = "naught";
-                        went = true;
-                    }
-                }
-            }
-
-            qwe = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[0][x] == "naught")
-                {
-                    qwe++;
-                }
-            }
-            if (qwe == 2)
-            {
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[0][x] == "none")
-                    {
-                        map[0][x] = "naught";
-                        went = true;
-                    }
-                }
-            }
-
-            qwe = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[x][1] == "naught")
-                {
-                    qwe++;
-                }
-            }
-            if (qwe == 2)
-            {
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[x][1] == "none")
-                    {
-                        map[x][1] = "naught";
-                        went = true;
-                    }
-                }
-            }
-
-            qwe = 0;
-            for (int x = 0; x < 3; x++)
-            {
-                if (map[x][2] == "naught")
-                {
-                    qwe++;
-                }
-            }
-            if (qwe == 2)
-            {
-                for (int x = 0; x < 3; x++)
-                {
-                    if (map[x][2] == "none")
-                    {
-                        map[x][2] = "naught";
-                        went = true;
-                    }
-                }
-            }
-
-            qwe = 0;
-            if (map[0][0] == "naught") {
-                qwe++;
-            }
-            if (map[1][1] == "naught")
-            {
-                qwe++;
-            }
-            if (map[2][2] == "naught")
-            {
-                qwe++;
-            }
-            if (qwe == 2) {
-                if (map[0][0] == "none") {
-                    map[0][0] = "naught";
-                    went = true;
-                }
-                if (map[1][1] == "none")
-                {
-                    map[1][1] = "naught";
-                    went = true;
-                }
-                if (map[2][2] == "none")
-                {
-                    map[2][2] = "naught";
-                    went = true;
-                }
-            }
-
-
-            qwe = 0;
-            if (map[0][2] == "naught")
-            {
-                qwe++;
-            }
-            if (map[1][1] == "naught")
-            {
-                qwe++;
-            }
-            if (map[2][0] == "naught")
-            {
-                qwe++;
-            }
-            if (qwe == 2)
-            {
-                if (map[0][2] == "none")
-                {
-                    map[0][2] = "naught";
-                    went = true;
-                }
-                if (map[1][1] == "none")
-                {
-                    map[1][1] = "naught";
-                    went = true;
-                }
-                if (map[2][0] == "none")
-                {
-                    map[2][0] = "naught";
-                    went = true;
-                }
-            }
 
 
             int cnt = 0;
@@ -654,6 +477,192 @@ namespace tictactoe
                         MessageBox.Show("YOU WON THE GAME!", "WIN");
                         Application.Restart();
                         Environment.Exit(0);
+                    }
+                }
+
+
+                int qwe = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][0] == "naught")
+                    {
+                        qwe++;
+                    }
+                }
+                if (qwe == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][0] == "none")
+                        {
+                            map[x][0] = "naught";
+                            went = true;
+                        }
+                    }
+                }
+
+                qwe = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][1] == "naught")
+                    {
+                        qwe++;
+                    }
+                }
+                if (qwe == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][1] == "none")
+                        {
+                            went = true;
+                            map[x][1] = "naught";
+                        }
+                    }
+                }
+
+                qwe = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][2] == "naught")
+                    {
+                        qwe++;
+                    }
+                }
+                if (qwe == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][2] == "none")
+                        {
+                            map[x][2] = "naught";
+                            went = true;
+                        }
+                    }
+                }
+
+                qwe = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[0][x] == "naught")
+                    {
+                        qwe++;
+                    }
+                }
+                if (qwe == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[0][x] == "none")
+                        {
+                            map[0][x] = "naught";
+                            went = true;
+                        }
+                    }
+                }
+
+                qwe = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][1] == "naught")
+                    {
+                        qwe++;
+                    }
+                }
+                if (qwe == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][1] == "none")
+                        {
+                            map[x][1] = "naught";
+                            went = true;
+                        }
+                    }
+                }
+
+                qwe = 0;
+                for (int x = 0; x < 3; x++)
+                {
+                    if (map[x][2] == "naught")
+                    {
+                        qwe++;
+                    }
+                }
+                if (qwe == 2)
+                {
+                    for (int x = 0; x < 3; x++)
+                    {
+                        if (map[x][2] == "none")
+                        {
+                            map[x][2] = "naught";
+                            went = true;
+                        }
+                    }
+                }
+
+                qwe = 0;
+                if (map[0][0] == "naught")
+                {
+                    qwe++;
+                }
+                if (map[1][1] == "naught")
+                {
+                    qwe++;
+                }
+                if (map[2][2] == "naught")
+                {
+                    qwe++;
+                }
+                if (qwe == 2)
+                {
+                    if (map[0][0] == "none")
+                    {
+                        map[0][0] = "naught";
+                        went = true;
+                    }
+                    if (map[1][1] == "none")
+                    {
+                        map[1][1] = "naught";
+                        went = true;
+                    }
+                    if (map[2][2] == "none")
+                    {
+                        map[2][2] = "naught";
+                        went = true;
+                    }
+                }
+
+
+                qwe = 0;
+                if (map[0][2] == "naught")
+                {
+                    qwe++;
+                }
+                if (map[1][1] == "naught")
+                {
+                    qwe++;
+                }
+                if (map[2][0] == "naught")
+                {
+                    qwe++;
+                }
+                if (qwe == 2)
+                {
+                    if (map[0][2] == "none")
+                    {
+                        map[0][2] = "naught";
+                        went = true;
+                    }
+                    if (map[1][1] == "none")
+                    {
+                        map[1][1] = "naught";
+                        went = true;
+                    }
+                    if (map[2][0] == "none")
+                    {
+                        map[2][0] = "naught";
+                        went = true;
                     }
                 }
             }
