@@ -1024,13 +1024,17 @@ namespace tictactoe
                     bool placed = false;
                     while (!placed)
                     {
+                    if (!went)
+                    {
                         int x = r.Next(0, 3);
                         int y = r.Next(0, 3);
                         if (map[x][y] == "none")
                         {
                             map[x][y] = "naught";
                             placed = true;
+                            went = true;
                         }
+                    }
                     }
                 }
 
