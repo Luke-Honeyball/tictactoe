@@ -1715,7 +1715,6 @@ namespace tictactoe
             }
             if (chk == 9)
             {
-                streak = 0;
                 label3.Text = streak.ToString();
                 MessageBox.Show("THE GAME WAS A TIE!", "TIE");
                 List<string> row1 = new List<string> { "none", "none", "none" };
@@ -1932,7 +1931,7 @@ namespace tictactoe
                                 }
                                 else
                                 {
-                                    pictureBox5.Image = Properties.Resources.cross;
+                                    pictureBox5.Image = Properties.Resources.naught;
                                 }
                             }
                             else if (y == 2)
