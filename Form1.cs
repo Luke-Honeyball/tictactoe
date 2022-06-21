@@ -8,6 +8,7 @@ namespace tictactoe
     {
         private List<List<string>> map = new List<List<string>>();
         private bool player_turn = true;
+
         private Timer t = new Timer();
 
         public Form1()
@@ -29,10 +30,19 @@ namespace tictactoe
             List<string> row1 = new List<string> { "none", "none", "none" };
             List<string> row2 = new List<string> { "none", "none", "none" };
             List<string> row3 = new List<string> { "none", "none", "none" };
-
+            map.Clear();
             map.Add(row1);
             map.Add(row2);
             map.Add(row3);
+            pictureBox1.Image = null;
+            pictureBox9.Image = null;
+            pictureBox8.Image = null;
+            pictureBox7.Image = null;
+            pictureBox6.Image = null;
+            pictureBox5.Image = null;
+            pictureBox4.Image = null;
+            pictureBox3.Image = null;
+            pictureBox2.Image = null;
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -192,8 +202,22 @@ namespace tictactoe
             if (cnt == 3)
             {
                 MessageBox.Show("YOU WON THE GAME!", "WIN");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
             if (!went)
             {
@@ -213,8 +237,22 @@ namespace tictactoe
                 if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    Application.Restart();
-                    Environment.Exit(0);
+                    List<string> row1 = new List<string> { "none", "none", "none" };
+                    List<string> row2 = new List<string> { "none", "none", "none" };
+                    List<string> row3 = new List<string> { "none", "none", "none" };
+                    map.Clear();
+                    map.Add(row1);
+                    map.Add(row2);
+                    map.Add(row3);
+                    pictureBox1.Image = null;
+                    pictureBox9.Image = null;
+                    pictureBox8.Image = null;
+                    pictureBox7.Image = null;
+                    pictureBox6.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox3.Image = null;
+                    pictureBox2.Image = null;
                 }
             }
             if (!went)
@@ -235,8 +273,22 @@ namespace tictactoe
                 if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    Application.Restart();
-                    Environment.Exit(0);
+                    List<string> row1 = new List<string> { "none", "none", "none" };
+                    List<string> row2 = new List<string> { "none", "none", "none" };
+                    List<string> row3 = new List<string> { "none", "none", "none" };
+                    map.Clear();
+                    map.Add(row1);
+                    map.Add(row2);
+                    map.Add(row3);
+                    pictureBox1.Image = null;
+                    pictureBox9.Image = null;
+                    pictureBox8.Image = null;
+                    pictureBox7.Image = null;
+                    pictureBox6.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox3.Image = null;
+                    pictureBox2.Image = null;
                 }
             }
             cnt = 0;
@@ -256,8 +308,22 @@ namespace tictactoe
                 if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    Application.Restart();
-                    Environment.Exit(0);
+                    List<string> row1 = new List<string> { "none", "none", "none" };
+                    List<string> row2 = new List<string> { "none", "none", "none" };
+                    List<string> row3 = new List<string> { "none", "none", "none" };
+                    map.Clear();
+                    map.Add(row1);
+                    map.Add(row2);
+                    map.Add(row3);
+                    pictureBox1.Image = null;
+                    pictureBox9.Image = null;
+                    pictureBox8.Image = null;
+                    pictureBox7.Image = null;
+                    pictureBox6.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox3.Image = null;
+                    pictureBox2.Image = null;
                 }
             }
             if (!went)
@@ -278,8 +344,22 @@ namespace tictactoe
                 if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    Application.Restart();
-                    Environment.Exit(0);
+                    List<string> row1 = new List<string> { "none", "none", "none" };
+                    List<string> row2 = new List<string> { "none", "none", "none" };
+                    List<string> row3 = new List<string> { "none", "none", "none" };
+                    map.Clear();
+                    map.Add(row1);
+                    map.Add(row2);
+                    map.Add(row3);
+                    pictureBox1.Image = null;
+                    pictureBox9.Image = null;
+                    pictureBox8.Image = null;
+                    pictureBox7.Image = null;
+                    pictureBox6.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox3.Image = null;
+                    pictureBox2.Image = null;
                 }
             }
             if (!went)
@@ -300,8 +380,22 @@ namespace tictactoe
                 if (cnt == 3)
                 {
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    Application.Restart();
-                    Environment.Exit(0);
+                    List<string> row1 = new List<string> { "none", "none", "none" };
+                    List<string> row2 = new List<string> { "none", "none", "none" };
+                    List<string> row3 = new List<string> { "none", "none", "none" };
+                    map.Clear();
+                    map.Add(row1);
+                    map.Add(row2);
+                    map.Add(row3);
+                    pictureBox1.Image = null;
+                    pictureBox9.Image = null;
+                    pictureBox8.Image = null;
+                    pictureBox7.Image = null;
+                    pictureBox6.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox3.Image = null;
+                    pictureBox2.Image = null;
                 }
             }
             if (!went)
@@ -334,9 +428,23 @@ namespace tictactoe
                 }
                 else if (cnt == 3)
                 {
-                    MessageBox.Show("YOU WON THE GAME!", "WIN");
-                    Application.Restart();
-                    Environment.Exit(0);
+                    MessageBox.Show("YOU WON THE GAME. You now have a streak of", "WIN");
+                    List<string> row1 = new List<string> { "none", "none", "none" };
+                    List<string> row2 = new List<string> { "none", "none", "none" };
+                    List<string> row3 = new List<string> { "none", "none", "none" };
+                    map.Clear();
+                    map.Add(row1);
+                    map.Add(row2);
+                    map.Add(row3);
+                    pictureBox1.Image = null;
+                    pictureBox9.Image = null;
+                    pictureBox8.Image = null;
+                    pictureBox7.Image = null;
+                    pictureBox6.Image = null;
+                    pictureBox5.Image = null;
+                    pictureBox4.Image = null;
+                    pictureBox3.Image = null;
+                    pictureBox2.Image = null;
                 }
 
                 if (!went)
@@ -370,8 +478,22 @@ namespace tictactoe
                     else if (cnt == 3)
                     {
                         MessageBox.Show("YOU WON THE GAME!", "WIN");
-                        Application.Restart();
-                        Environment.Exit(0);
+                        List<string> row1 = new List<string> { "none", "none", "none" };
+                        List<string> row2 = new List<string> { "none", "none", "none" };
+                        List<string> row3 = new List<string> { "none", "none", "none" };
+                        map.Clear();
+                        map.Add(row1);
+                        map.Add(row2);
+                        map.Add(row3);
+                        pictureBox1.Image = null;
+                        pictureBox9.Image = null;
+                        pictureBox8.Image = null;
+                        pictureBox7.Image = null;
+                        pictureBox6.Image = null;
+                        pictureBox5.Image = null;
+                        pictureBox4.Image = null;
+                        pictureBox3.Image = null;
+                        pictureBox2.Image = null;
                     }
                 }
 
@@ -388,10 +510,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[x][0] == "none")
+                        if (!went)
                         {
-                            map[x][0] = "naught";
-                            went = true;
+                            if (map[x][0] == "none")
+                            {
+                                map[x][0] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -408,10 +533,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[x][1] == "none")
+                        if (!went)
                         {
-                            went = true;
-                            map[x][1] = "naught";
+                            if (map[x][1] == "none")
+                            {
+                                went = true;
+                                map[x][1] = "naught";
+                            }
                         }
                     }
                 }
@@ -428,10 +556,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[x][2] == "none")
+                        if (!went)
                         {
-                            map[x][2] = "naught";
-                            went = true;
+                            if (map[x][2] == "none")
+                            {
+                                map[x][2] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -448,10 +579,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[0][x] == "none")
+                        if (!went)
                         {
-                            map[0][x] = "naught";
-                            went = true;
+                            if (map[0][x] == "none")
+                            {
+                                map[0][x] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -468,10 +602,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[x][1] == "none")
+                        if (!went)
                         {
-                            map[x][1] = "naught";
-                            went = true;
+                            if (map[x][1] == "none")
+                            {
+                                map[x][1] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -488,14 +625,17 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[x][2] == "none")
+                        if (!went)
                         {
-                            map[x][2] = "naught";
-                            went = true;
+                            if (map[x][2] == "none")
+                            {
+                                map[x][2] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
-
+                if (!went) { 
                 qwe = 0;
                 if (map[0][0] == "naught")
                 {
@@ -516,18 +656,24 @@ namespace tictactoe
                         map[0][0] = "naught";
                         went = true;
                     }
-                    if (map[1][1] == "none")
+                    if (!went)
                     {
-                        map[1][1] = "naught";
-                        went = true;
+                        if (map[1][1] == "none")
+                        {
+                            map[1][1] = "naught";
+                            went = true;
+                        }
                     }
-                    if (map[2][2] == "none")
+                    if (!went)
                     {
-                        map[2][2] = "naught";
-                        went = true;
+                        if (map[2][2] == "none")
+                        {
+                            map[2][2] = "naught";
+                            went = true;
+                        }
                     }
-                }
-
+                } }
+                if (!went) { 
                 qwe = 0;
                 if (map[0][2] == "naught")
                 {
@@ -541,22 +687,29 @@ namespace tictactoe
                 {
                     qwe++;
                 }
-                if (qwe == 2)
-                {
-                    if (map[0][2] == "none")
+                    if (qwe == 2)
                     {
-                        map[0][2] = "naught";
-                        went = true;
-                    }
-                    if (map[1][1] == "none")
-                    {
-                        map[1][1] = "naught";
-                        went = true;
-                    }
-                    if (map[2][0] == "none")
-                    {
-                        map[2][0] = "naught";
-                        went = true;
+                        if (map[0][2] == "none")
+                        {
+                            map[0][2] = "naught";
+                            went = true;
+                        }
+                        if (!went)
+                        {
+                            if (map[1][1] == "none")
+                            {
+                                map[1][1] = "naught";
+                                went = true;
+                            }
+                        }
+                        if (!went)
+                        {
+                            if (map[2][0] == "none")
+                            {
+                                map[2][0] = "naught";
+                                went = true;
+                            }
+                        }
                     }
                 }
             }
@@ -578,10 +731,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[0][x] == "none")
+                        if (!went)
                         {
-                            map[0][x] = "naught";
-                            went = true;
+                            if (map[0][x] == "none")
+                            {
+                                map[0][x] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -604,10 +760,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[1][x] == "none")
+                        if (!went)
                         {
-                            map[1][x] = "naught";
-                            went = true;
+                            if (map[1][x] == "none")
+                            {
+                                map[1][x] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -630,10 +789,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[2][x] == "none")
+                        if (!went)
                         {
-                            map[2][x] = "naught";
-                            went = true;
+                            if (map[2][x] == "none")
+                            {
+                                map[2][x] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -656,10 +818,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[x][0] == "none")
+                        if (!went)
                         {
-                            map[x][0] = "naught";
-                            went = true;
+                            if (map[x][0] == "none")
+                            {
+                                map[x][0] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -682,10 +847,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[x][1] == "none")
+                        if (!went)
                         {
-                            map[x][1] = "naught";
-                            went = true;
+                            if (map[x][1] == "none")
+                            {
+                                map[x][1] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -708,10 +876,13 @@ namespace tictactoe
                 {
                     for (int x = 0; x < 3; x++)
                     {
-                        if (map[x][2] == "none")
+                        if (!went)
                         {
-                            map[x][2] = "naught";
-                            went = true;
+                            if (map[x][2] == "none")
+                            {
+                                map[x][2] = "naught";
+                                went = true;
+                            }
                         }
                     }
                 }
@@ -1131,8 +1302,22 @@ namespace tictactoe
             if (cnn == 3)
             {
                 MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
 
             cnn = 0;
@@ -1146,8 +1331,22 @@ namespace tictactoe
             if (cnn == 3)
             {
                 MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
             cnn = 0;
             for (int x = 0; x < 3; x++)
@@ -1161,8 +1360,22 @@ namespace tictactoe
             if (cnn == 3)
             {
                 MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
 
             cnn = 0;
@@ -1177,8 +1390,22 @@ namespace tictactoe
             if (cnn == 3)
             {
                 MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
 
             cnn = 0;
@@ -1193,8 +1420,22 @@ namespace tictactoe
             if (cnn == 3)
             {
                 MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
 
             cnn = 0;
@@ -1208,8 +1449,22 @@ namespace tictactoe
             if (cnn == 3)
             {
                 MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
             cnn = 0;
 
@@ -1229,8 +1484,22 @@ namespace tictactoe
             if (cnn == 3)
             {
                 MessageBox.Show("THE PC WINS!", "LOSE");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
 
             cnn = 0;
@@ -1251,8 +1520,22 @@ namespace tictactoe
             if (cnn == 3)
             {
                 MessageBox.Show("THE PC WINS!");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
 
             int chk = 0;
@@ -1269,8 +1552,23 @@ namespace tictactoe
             if (chk == 9)
             {
                 MessageBox.Show("THE GAME WAS A TIE!", "TIE");
-                Application.Restart();
-                Environment.Exit(0);
+                List<string> row1 = new List<string> { "none", "none", "none" };
+                List<string> row2 = new List<string> { "none", "none", "none" };
+                List<string> row3 = new List<string> { "none", "none", "none" };
+                map.Clear();
+                
+                map.Add(row1);
+                map.Add(row2);
+                map.Add(row3);
+                pictureBox1.Image = null;
+                pictureBox9.Image = null;
+                pictureBox8.Image = null;
+                pictureBox7.Image = null;
+                pictureBox6.Image = null;
+                pictureBox5.Image = null;
+                pictureBox4.Image = null;
+                pictureBox3.Image = null;
+                pictureBox2.Image = null;
             }
 
             label1.Text = "Your turn.";
