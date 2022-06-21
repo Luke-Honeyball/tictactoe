@@ -6,6 +6,9 @@ namespace tictactoe
 {
     public partial class Form1 : Form
     {
+        private string side = "cross";
+        int streak = 0;
+        private bool has_switched = false;
         private List<List<string>> map = new List<List<string>>();
         private bool player_turn = true;
 
@@ -51,7 +54,14 @@ namespace tictactoe
             {
                 if (pictureBox5.Image == null)
                 {
-                    pictureBox5.Image = Properties.Resources.cross;
+                    if (side == "cross")
+                    {
+                        pictureBox5.Image = Properties.Resources.cross;
+                    }
+                    else
+                    {
+                        pictureBox5.Image = Properties.Resources.naught;
+                    }
                     player_turn = false;
                     map[1][1] = "cross";
 
@@ -67,7 +77,14 @@ namespace tictactoe
             {
                 if (pictureBox4.Image == null)
                 {
-                    pictureBox4.Image = Properties.Resources.cross;
+                    if (side == "cross")
+                    {
+                        pictureBox4.Image = Properties.Resources.cross;
+                    }
+                    else
+                    {
+                        pictureBox4.Image = Properties.Resources.naught;
+                    }
                     player_turn = false;
                     map[1][0] = "cross";
                     label1.Text = "Thinking...";
@@ -82,7 +99,14 @@ namespace tictactoe
             {
                 if (pictureBox7.Image == null)
                 {
-                    pictureBox7.Image = Properties.Resources.cross;
+                    if (side == "cross")
+                    {
+                        pictureBox7.Image = Properties.Resources.cross;
+                    }
+                    else
+                    {
+                        pictureBox7.Image = Properties.Resources.naught;
+                    }
                     player_turn = false;
                     map[2][0] = "cross";
                     label1.Text = "Thinking...";
@@ -97,7 +121,14 @@ namespace tictactoe
             {
                 if (pictureBox8.Image == null)
                 {
-                    pictureBox8.Image = Properties.Resources.cross;
+                    if (side == "cross")
+                    {
+                        pictureBox8.Image = Properties.Resources.cross;
+                    }
+                    else
+                    {
+                        pictureBox8.Image = Properties.Resources.naught;
+                    }
                     player_turn = false;
                     map[2][1] = "cross";
                     label1.Text = "Thinking...";
@@ -112,7 +143,14 @@ namespace tictactoe
             {
                 if (pictureBox2.Image == null)
                 {
-                    pictureBox2.Image = Properties.Resources.cross;
+                    if (side == "cross")
+                    {
+                        pictureBox2.Image = Properties.Resources.cross;
+                    }
+                    else
+                    {
+                        pictureBox2.Image = Properties.Resources.naught;
+                    }
                     player_turn = false;
                     map[0][1] = "cross";
                     label1.Text = "Thinking...";
@@ -127,7 +165,14 @@ namespace tictactoe
             {
                 if (pictureBox6.Image == null)
                 {
-                    pictureBox6.Image = Properties.Resources.cross;
+                    if (side == "cross")
+                    {
+                        pictureBox6.Image = Properties.Resources.cross;
+                    }
+                    else
+                    {
+                        pictureBox6.Image = Properties.Resources.naught;
+                    }
                     player_turn = false;
                     map[1][2] = "cross";
                     label1.Text = "Thinking...";
@@ -142,7 +187,14 @@ namespace tictactoe
             {
                 if (pictureBox3.Image == null)
                 {
-                    pictureBox3.Image = Properties.Resources.cross;
+                    if (side == "cross")
+                    {
+                        pictureBox3.Image = Properties.Resources.cross;
+                    }
+                    else
+                    {
+                        pictureBox3.Image = Properties.Resources.naught;
+                    }
                     player_turn = false;
                     map[0][2] = "cross";
                     label1.Text = "Thinking...";
@@ -157,7 +209,14 @@ namespace tictactoe
             {
                 if (pictureBox1.Image == null)
                 {
-                    pictureBox1.Image = Properties.Resources.cross;
+                    if (side == "cross")
+                    {
+                        pictureBox1.Image = Properties.Resources.cross;
+                    }
+                    else
+                    {
+                        pictureBox1.Image = Properties.Resources.naught;
+                    }
                     player_turn = false;
                     map[0][0] = "cross";
                     label1.Text = "Thinking...";
@@ -173,7 +232,14 @@ namespace tictactoe
             {
                 if (pictureBox9.Image == null)
                 {
-                    pictureBox9.Image = Properties.Resources.cross;
+                    if (side == "cross")
+                    {
+                        pictureBox9.Image = Properties.Resources.cross;
+                    }
+                    else
+                    {
+                        pictureBox9.Image = Properties.Resources.naught;
+                    }
                     player_turn = false;
                     map[2][2] = "cross";
                     label1.Text = "Thinking...";
@@ -201,6 +267,8 @@ namespace tictactoe
             }
             if (cnt == 3)
             {
+                streak++;
+                label3.Text = streak.ToString();
                 MessageBox.Show("YOU WON THE GAME!", "WIN");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -236,6 +304,8 @@ namespace tictactoe
                 }
                 if (cnt == 3)
                 {
+                    streak++;
+                    label3.Text = streak.ToString();
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
@@ -272,6 +342,8 @@ namespace tictactoe
                 }
                 if (cnt == 3)
                 {
+                    streak++;
+                    label3.Text = streak.ToString();
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
@@ -307,6 +379,8 @@ namespace tictactoe
                 }
                 if (cnt == 3)
                 {
+                    streak++;
+                    label3.Text = streak.ToString();
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
@@ -343,6 +417,8 @@ namespace tictactoe
                 }
                 if (cnt == 3)
                 {
+                    streak++;
+                    label3.Text = streak.ToString();
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
@@ -379,6 +455,8 @@ namespace tictactoe
                 }
                 if (cnt == 3)
                 {
+                    streak++;
+                    label3.Text = streak.ToString();
                     MessageBox.Show("YOU WON THE GAME!", "WIN");
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
@@ -428,7 +506,9 @@ namespace tictactoe
                 }
                 else if (cnt == 3)
                 {
-                    MessageBox.Show("YOU WON THE GAME. You now have a streak of", "WIN");
+                    streak++;
+                    label3.Text = streak.ToString();
+                    MessageBox.Show("YOU WON THE GAME.", "WIN");
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
                     List<string> row3 = new List<string> { "none", "none", "none" };
@@ -477,6 +557,8 @@ namespace tictactoe
                     }
                     else if (cnt == 3)
                     {
+                        streak++;
+                        label3.Text = streak.ToString();
                         MessageBox.Show("YOU WON THE GAME!", "WIN");
                         List<string> row1 = new List<string> { "none", "none", "none" };
                         List<string> row2 = new List<string> { "none", "none", "none" };
@@ -635,58 +717,61 @@ namespace tictactoe
                         }
                     }
                 }
-                if (!went) { 
-                qwe = 0;
-                if (map[0][0] == "naught")
+                if (!went)
                 {
-                    qwe++;
-                }
-                if (map[1][1] == "naught")
-                {
-                    qwe++;
-                }
-                if (map[2][2] == "naught")
-                {
-                    qwe++;
-                }
-                if (qwe == 2)
-                {
-                    if (map[0][0] == "none")
+                    qwe = 0;
+                    if (map[0][0] == "naught")
                     {
-                        map[0][0] = "naught";
-                        went = true;
+                        qwe++;
                     }
-                    if (!went)
+                    if (map[1][1] == "naught")
                     {
-                        if (map[1][1] == "none")
+                        qwe++;
+                    }
+                    if (map[2][2] == "naught")
+                    {
+                        qwe++;
+                    }
+                    if (qwe == 2)
+                    {
+                        if (map[0][0] == "none")
                         {
-                            map[1][1] = "naught";
+                            map[0][0] = "naught";
                             went = true;
                         }
-                    }
-                    if (!went)
-                    {
-                        if (map[2][2] == "none")
+                        if (!went)
                         {
-                            map[2][2] = "naught";
-                            went = true;
+                            if (map[1][1] == "none")
+                            {
+                                map[1][1] = "naught";
+                                went = true;
+                            }
+                        }
+                        if (!went)
+                        {
+                            if (map[2][2] == "none")
+                            {
+                                map[2][2] = "naught";
+                                went = true;
+                            }
                         }
                     }
-                } }
-                if (!went) { 
-                qwe = 0;
-                if (map[0][2] == "naught")
-                {
-                    qwe++;
                 }
-                if (map[1][1] == "naught")
+                if (!went)
                 {
-                    qwe++;
-                }
-                if (map[2][0] == "naught")
-                {
-                    qwe++;
-                }
+                    qwe = 0;
+                    if (map[0][2] == "naught")
+                    {
+                        qwe++;
+                    }
+                    if (map[1][1] == "naught")
+                    {
+                        qwe++;
+                    }
+                    if (map[2][0] == "naught")
+                    {
+                        qwe++;
+                    }
                     if (qwe == 2)
                     {
                         if (map[0][2] == "none")
@@ -1246,45 +1331,108 @@ namespace tictactoe
                         {
                             if (y == 0)
                             {
-                                pictureBox1.Image = Properties.Resources.naught;
+                                if (side == "cross")
+                                {
+                                    pictureBox1.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox1.Image = Properties.Resources.cross;
+                                }
                             }
                             else if (y == 1)
                             {
-                                pictureBox2.Image = Properties.Resources.naught;
+                                if (side == "cross")
+                                {
+                                    pictureBox2.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox2.Image = Properties.Resources.cross;
+                                }
                             }
                             else if (y == 2)
                             {
-                                pictureBox3.Image = Properties.Resources.naught;
+                                if (side == "cross")
+                                {
+                                    pictureBox3.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox3.Image = Properties.Resources.cross;
+                                }
                             }
                         }
                         else if (x == 1)
                         {
                             if (y == 0)
                             {
-                                pictureBox4.Image = Properties.Resources.naught;
+                                if (side == "cross")
+                                {
+                                    pictureBox4.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox4.Image = Properties.Resources.cross;
+                                }
                             }
                             else if (y == 1)
                             {
-                                pictureBox5.Image = Properties.Resources.naught;
+                                if (side == "cross")
+                                {
+                                    pictureBox5.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox5.Image = Properties.Resources.cross;
+                                }
                             }
                             else if (y == 2)
                             {
-                                pictureBox6.Image = Properties.Resources.naught;
+                                if (side == "cross")
+                                {
+                                    pictureBox6.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox6.Image = Properties.Resources.cross;
+                                }
                             }
                         }
                         else if (x == 2)
                         {
                             if (y == 0)
                             {
-                                pictureBox7.Image = Properties.Resources.naught;
+                                if (side == "cross")
+                                {
+                                    pictureBox7.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox7.Image = Properties.Resources.cross;
+                                }
                             }
                             else if (y == 1)
                             {
-                                pictureBox8.Image = Properties.Resources.naught;
+                                if (side == "cross")
+                                {
+                                    pictureBox8.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox8.Image = Properties.Resources.cross;
+                                }
                             }
                             else if (y == 2)
                             {
-                                pictureBox9.Image = Properties.Resources.naught;
+                                if (side == "cross")
+                                {
+                                    pictureBox9.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox9.Image = Properties.Resources.cross;
+                                }
                             }
                         }
                     }
@@ -1301,6 +1449,8 @@ namespace tictactoe
             }
             if (cnn == 3)
             {
+                streak = 0;
+                label3.Text = streak.ToString();
                 MessageBox.Show("THE PC WINS!", "LOSE");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -1330,6 +1480,8 @@ namespace tictactoe
             }
             if (cnn == 3)
             {
+                streak = 0;
+                label3.Text = streak.ToString();
                 MessageBox.Show("THE PC WINS!", "LOSE");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -1359,6 +1511,8 @@ namespace tictactoe
 
             if (cnn == 3)
             {
+                streak = 0;
+                label3.Text = streak.ToString();
                 MessageBox.Show("THE PC WINS!", "LOSE");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -1389,6 +1543,8 @@ namespace tictactoe
 
             if (cnn == 3)
             {
+                streak = 0;
+                label3.Text = streak.ToString();
                 MessageBox.Show("THE PC WINS!", "LOSE");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -1419,6 +1575,8 @@ namespace tictactoe
 
             if (cnn == 3)
             {
+                streak = 0;
+                label3.Text = streak.ToString();
                 MessageBox.Show("THE PC WINS!", "LOSE");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -1448,6 +1606,8 @@ namespace tictactoe
             }
             if (cnn == 3)
             {
+                streak = 0;
+                label3.Text = streak.ToString();
                 MessageBox.Show("THE PC WINS!", "LOSE");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -1483,6 +1643,8 @@ namespace tictactoe
 
             if (cnn == 3)
             {
+                streak = 0;
+                label3.Text = streak.ToString();
                 MessageBox.Show("THE PC WINS!", "LOSE");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -1519,6 +1681,8 @@ namespace tictactoe
 
             if (cnn == 3)
             {
+                streak = 0;
+                label3.Text = streak.ToString();
                 MessageBox.Show("THE PC WINS!");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -1551,6 +1715,8 @@ namespace tictactoe
             }
             if (chk == 9)
             {
+                streak = 0;
+                label3.Text = streak.ToString();
                 MessageBox.Show("THE GAME WAS A TIE!", "TIE");
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
@@ -1574,6 +1740,266 @@ namespace tictactoe
             label1.Text = "Your turn.";
 
             player_turn = true;
+        }
+
+        private void switcher()
+        {
+            for (int x = 0; x < 3; x++)
+            {
+                for (int y = 0; y < 3; y++)
+                {
+                    if (map[x][y] == "naught")
+                    {
+                        if (x == 0)
+                        {
+                            if (y == 0)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox1.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox1.Image = Properties.Resources.cross;
+                                }
+                            }
+                            else if (y == 1)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox2.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox2.Image = Properties.Resources.cross;
+                                }
+                            }
+                            else if (y == 2)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox3.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox3.Image = Properties.Resources.cross;
+                                }
+                            }
+                        }
+                        else if (x == 1)
+                        {
+                            if (y == 0)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox4.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox4.Image = Properties.Resources.cross;
+                                }
+                            }
+                            else if (y == 1)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox5.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox5.Image = Properties.Resources.cross;
+                                }
+                            }
+                            else if (y == 2)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox6.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox6.Image = Properties.Resources.cross;
+                                }
+                            }
+                        }
+                        else if (x == 2)
+                        {
+                            if (y == 0)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox7.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox7.Image = Properties.Resources.cross;
+                                }
+                            }
+                            else if (y == 1)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox8.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox8.Image = Properties.Resources.cross;
+                                }
+                            }
+                            else if (y == 2)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox9.Image = Properties.Resources.naught;
+                                }
+                                else
+                                {
+                                    pictureBox9.Image = Properties.Resources.cross;
+                                }
+                            }
+                        }
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    if (map[x][y] == "cross")
+                    {
+                        if (x == 0)
+                        {
+                            if (y == 0)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox1.Image = Properties.Resources.cross;
+                                }
+                                else
+                                {
+                                    pictureBox1.Image = Properties.Resources.naught;
+                                }
+                            }
+                            else if (y == 1)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox2.Image = Properties.Resources.cross;
+                                }
+                                else
+                                {
+                                    pictureBox2.Image = Properties.Resources.naught;
+                                }
+                            }
+                            else if (y == 2)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox3.Image = Properties.Resources.cross;
+                                }
+                                else
+                                {
+                                    pictureBox3.Image = Properties.Resources.naught;
+                                }
+                            }
+                        }
+                        else if (x == 1)
+                        {
+                            if (y == 0)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox4.Image = Properties.Resources.cross;
+                                }
+                                else
+                                {
+                                    pictureBox4.Image = Properties.Resources.naught;
+                                }
+                            }
+                            else if (y == 1)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox5.Image = Properties.Resources.cross;
+                                }
+                                else
+                                {
+                                    pictureBox5.Image = Properties.Resources.cross;
+                                }
+                            }
+                            else if (y == 2)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox6.Image = Properties.Resources.cross;
+                                }
+                                else
+                                {
+                                    pictureBox6.Image = Properties.Resources.naught;
+                                }
+                            }
+                        }
+                        else if (x == 2)
+                        {
+                            if (y == 0)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox7.Image = Properties.Resources.cross;
+                                }
+                                else
+                                {
+                                    pictureBox7.Image = Properties.Resources.naught;
+                                }
+                            }
+                            else if (y == 1)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox8.Image = Properties.Resources.cross;
+                                }
+                                else
+                                {
+                                    pictureBox8.Image = Properties.Resources.naught;
+                                }
+                            }
+                            else if (y == 2)
+                            {
+                                if (side == "cross")
+                                {
+                                    pictureBox9.Image = Properties.Resources.cross;
+                                }
+                                else
+                                {
+                                    pictureBox9.Image = Properties.Resources.naught;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            has_switched = true;
+            if (side == "cross")
+            {
+                side = "naught";
+            }
+            else
+            {
+                side = "cross";
+            }
+            switcher();
         }
     }
 }

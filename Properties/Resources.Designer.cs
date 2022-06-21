@@ -79,5 +79,24 @@ namespace tictactoe.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to cross.
+        /// </summary>
+        internal static string side {
+            get {
+                return ResourceManager.GetString("side", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap toppng_com_settings_repair_white_icon_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("toppng.com-settings-repair-white-icon-512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
