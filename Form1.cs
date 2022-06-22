@@ -8,6 +8,7 @@ namespace tictactoe
     {
         private string side = "cross";
         int streak = 0;
+        Timer scr_cnt = new Timer();
         private bool has_switched = false;
         private List<List<string>> map = new List<List<string>>();
         private bool player_turn = true;
@@ -19,7 +20,17 @@ namespace tictactoe
             InitializeComponent();
             initialize();
             t.Tick += T_Tick;
-            t.Interval = 500;
+            scr_cnt.Tick += Scr_cnt_Tick;
+            scr_cnt.Interval = 2000;
+            t.Interval = 200;
+            label4.Visible = false;
+        }
+
+        private void Scr_cnt_Tick(object sender, EventArgs e)
+        {
+            label4.Visible = false;
+            player_turn = true;
+            scr_cnt.Stop();
         }
 
         private void T_Tick(object sender, EventArgs e)
@@ -269,7 +280,11 @@ namespace tictactoe
             {
                 streak++;
                 label3.Text = streak.ToString();
-                MessageBox.Show("YOU WON THE GAME!", "WIN");
+                label4.Visible = true;
+
+                player_turn = false;
+                label4.Text = "YOU WIN!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
@@ -307,7 +322,10 @@ namespace tictactoe
                 {
                     streak++;
                     label3.Text = streak.ToString();
-                    MessageBox.Show("YOU WON THE GAME!", "WIN");
+                    label4.Visible = true;
+                    player_turn = false;
+                    label4.Text = "YOU WIN!";
+                    scr_cnt.Start();
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
                     List<string> row3 = new List<string> { "none", "none", "none" };
@@ -346,7 +364,10 @@ namespace tictactoe
                 {
                     streak++;
                     label3.Text = streak.ToString();
-                    MessageBox.Show("YOU WON THE GAME!", "WIN");
+                    label4.Visible = true;
+                    player_turn = false;
+                    label4.Text = "YOU WIN!";
+                    scr_cnt.Start();
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
                     List<string> row3 = new List<string> { "none", "none", "none" };
@@ -384,7 +405,10 @@ namespace tictactoe
                 {
                     streak++;
                     label3.Text = streak.ToString();
-                    MessageBox.Show("YOU WON THE GAME!", "WIN");
+                    label4.Visible = true;
+                    player_turn = false;
+                    label4.Text = "YOU WIN!";
+                    scr_cnt.Start();
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
                     List<string> row3 = new List<string> { "none", "none", "none" };
@@ -423,7 +447,10 @@ namespace tictactoe
                 {
                     streak++;
                     label3.Text = streak.ToString();
-                    MessageBox.Show("YOU WON THE GAME!", "WIN");
+                    label4.Visible = true;
+                    player_turn = false;
+                    label4.Text = "YOU WIN!";
+                    scr_cnt.Start();
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
                     List<string> row3 = new List<string> { "none", "none", "none" };
@@ -462,7 +489,10 @@ namespace tictactoe
                 {
                     streak++;
                     label3.Text = streak.ToString();
-                    MessageBox.Show("YOU WON THE GAME!", "WIN");
+                    label4.Visible = true;
+                    player_turn = false;
+                    label4.Text = "YOU WIN!";
+                    scr_cnt.Start();
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
                     List<string> row3 = new List<string> { "none", "none", "none" };
@@ -514,7 +544,10 @@ namespace tictactoe
                 {
                     streak++;
                     label3.Text = streak.ToString();
-                    MessageBox.Show("YOU WON THE GAME!", "WIN");
+                    label4.Visible = true;
+                    player_turn = false;
+                    label4.Text = "YOU WIN!";
+                    scr_cnt.Start();
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
                     List<string> row3 = new List<string> { "none", "none", "none" };
@@ -566,7 +599,10 @@ namespace tictactoe
                     {
                         streak++;
                         label3.Text = streak.ToString();
-                        MessageBox.Show("YOU WON THE GAME!", "WIN");
+                        label4.Visible = true;
+                        player_turn = false;
+                        label4.Text = "YOU WIN!";
+                        scr_cnt.Start();
                         List<string> row1 = new List<string> { "none", "none", "none" };
                         List<string> row2 = new List<string> { "none", "none", "none" };
                         List<string> row3 = new List<string> { "none", "none", "none" };
@@ -1459,7 +1495,10 @@ namespace tictactoe
             {
                 streak = 0;
                 label3.Text = streak.ToString();
-                MessageBox.Show("THE PC WINS!", "LOSE");
+                label4.Visible = true;
+                player_turn = false;
+                label4.Text = "YOU LOSE!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
@@ -1490,7 +1529,11 @@ namespace tictactoe
             {
                 streak = 0;
                 label3.Text = streak.ToString();
-                MessageBox.Show("THE PC WINS!", "LOSE");
+                label4.Visible = true;
+                player_turn = false;
+
+                label4.Text = "YOU LOSE!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
@@ -1521,7 +1564,10 @@ namespace tictactoe
             {
                 streak = 0;
                 label3.Text = streak.ToString();
-                MessageBox.Show("THE PC WINS!", "LOSE");
+                label4.Visible = true;
+                player_turn = false;
+                label4.Text = "YOU LOSE!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
@@ -1553,7 +1599,10 @@ namespace tictactoe
             {
                 streak = 0;
                 label3.Text = streak.ToString();
-                MessageBox.Show("THE PC WINS!", "LOSE");
+                label4.Visible = true;
+                player_turn = false;
+                label4.Text = "YOU LOSE!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
@@ -1585,7 +1634,10 @@ namespace tictactoe
             {
                 streak = 0;
                 label3.Text = streak.ToString();
-                MessageBox.Show("THE PC WINS!", "LOSE");
+                label4.Visible = true;
+                player_turn = false;
+                label4.Text = "YOU LOSE!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
@@ -1616,7 +1668,11 @@ namespace tictactoe
             {
                 streak = 0;
                 label3.Text = streak.ToString();
-                MessageBox.Show("THE PC WINS!", "LOSE");
+                label4.Visible = true;
+                player_turn = false;
+
+                label4.Text = "YOU LOSE!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
@@ -1653,7 +1709,10 @@ namespace tictactoe
             {
                 streak = 0;
                 label3.Text = streak.ToString();
-                MessageBox.Show("THE PC WINS!", "LOSE");
+                label4.Visible = true;
+                player_turn = false;
+                label4.Text = "YOU LOSE!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
@@ -1691,7 +1750,10 @@ namespace tictactoe
             {
                 streak = 0;
                 label3.Text = streak.ToString();
-                MessageBox.Show("THE PC WINS!");
+                label4.Visible = true;
+                player_turn = false;
+                label4.Text = "YOU LOSE!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
@@ -1724,7 +1786,10 @@ namespace tictactoe
             if (chk == 9)
             {
                 label3.Text = streak.ToString();
-                MessageBox.Show("THE GAME WAS A TIE!", "TIE");
+                label4.Visible = true;
+                player_turn = false;
+                label4.Text = "TIE!";
+                scr_cnt.Start();
                 List<string> row1 = new List<string> { "none", "none", "none" };
                 List<string> row2 = new List<string> { "none", "none", "none" };
                 List<string> row3 = new List<string> { "none", "none", "none" };
