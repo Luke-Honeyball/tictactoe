@@ -19,7 +19,7 @@ namespace tictactoe
             InitializeComponent();
             initialize();
             t.Tick += T_Tick;
-            t.Interval = 1000;
+            t.Interval = 500;
         }
 
         private void T_Tick(object sender, EventArgs e)
@@ -286,6 +286,7 @@ namespace tictactoe
                 pictureBox4.Image = null;
                 pictureBox3.Image = null;
                 pictureBox2.Image = null;
+                went = true;
             }
             if (!went)
             {
@@ -323,6 +324,7 @@ namespace tictactoe
                     pictureBox4.Image = null;
                     pictureBox3.Image = null;
                     pictureBox2.Image = null;
+                    went = true;
                 }
             }
             if (!went)
@@ -361,6 +363,7 @@ namespace tictactoe
                     pictureBox4.Image = null;
                     pictureBox3.Image = null;
                     pictureBox2.Image = null;
+                    went = true;
                 }
             }
             cnt = 0;
@@ -398,6 +401,7 @@ namespace tictactoe
                     pictureBox4.Image = null;
                     pictureBox3.Image = null;
                     pictureBox2.Image = null;
+                    went = true;
                 }
             }
             if (!went)
@@ -436,6 +440,7 @@ namespace tictactoe
                     pictureBox4.Image = null;
                     pictureBox3.Image = null;
                     pictureBox2.Image = null;
+                    went = true;
                 }
             }
             if (!went)
@@ -474,6 +479,7 @@ namespace tictactoe
                     pictureBox4.Image = null;
                     pictureBox3.Image = null;
                     pictureBox2.Image = null;
+                    went = true;
                 }
             }
             if (!went)
@@ -508,7 +514,7 @@ namespace tictactoe
                 {
                     streak++;
                     label3.Text = streak.ToString();
-                    MessageBox.Show("YOU WON THE GAME.", "WIN");
+                    MessageBox.Show("YOU WON THE GAME!", "WIN");
                     List<string> row1 = new List<string> { "none", "none", "none" };
                     List<string> row2 = new List<string> { "none", "none", "none" };
                     List<string> row3 = new List<string> { "none", "none", "none" };
@@ -523,8 +529,9 @@ namespace tictactoe
                     pictureBox6.Image = null;
                     pictureBox5.Image = null;
                     pictureBox4.Image = null;
-                    pictureBox3.Image = null;
+                    pictureBox3.Image = null;             
                     pictureBox2.Image = null;
+                    went = true;
                 }
 
                 if (!went)
@@ -576,6 +583,7 @@ namespace tictactoe
                         pictureBox4.Image = null;
                         pictureBox3.Image = null;
                         pictureBox2.Image = null;
+                        went = true;
                     }
                 }
 
@@ -675,7 +683,7 @@ namespace tictactoe
                 qwe = 0;
                 for (int x = 0; x < 3; x++)
                 {
-                    if (map[x][1] == "naught")
+                    if (map[1][x] == "naught")
                     {
                         qwe++;
                     }
@@ -686,9 +694,9 @@ namespace tictactoe
                     {
                         if (!went)
                         {
-                            if (map[x][1] == "none")
+                            if (map[1][x] == "none")
                             {
-                                map[x][1] = "naught";
+                                map[1][x] = "naught";
                                 went = true;
                             }
                         }
@@ -698,7 +706,7 @@ namespace tictactoe
                 qwe = 0;
                 for (int x = 0; x < 3; x++)
                 {
-                    if (map[x][2] == "naught")
+                    if (map[2][x] == "naught")
                     {
                         qwe++;
                     }
@@ -709,9 +717,9 @@ namespace tictactoe
                     {
                         if (!went)
                         {
-                            if (map[x][2] == "none")
+                            if (map[2][x] == "none")
                             {
-                                map[x][2] = "naught";
+                                map[2][x] = "naught";
                                 went = true;
                             }
                         }
